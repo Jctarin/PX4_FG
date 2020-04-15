@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<PropertyList>
+<generic>
+   <output>
+      <line_separator>newline</line_separator>
+      <var_separator>,</var_separator>
+ 
+      <chunk>
+	<name>latitude</name>
+  	<node>/position/latitude-deg</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk> 
+
+      <chunk>
+	<name>longitude</name>
+  	<node>/position/longitude-deg</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+
+      <chunk>
+	<name>altitude</name>
+  	<node>/position/altitude-ft</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+
+      <chunk>
+	<name>speed - north</name>
+  	<node>/velocities/speed-north-fps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+       
+      <chunk>
+	<name>speed - east</name>
+  	<node>/velocities/speed-east-fps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+       
+      <chunk>
+	<name>speed - down</name>
+  	<node>/velocities/speed-down-fps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+
+      <chunk>
+	<name>x-accel</name>
+  	<node>/accelerations/pilot/x-accel-fps_sec</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>
+    
+      <chunk>
+	<name>y-accel</name>
+  	<node>/accelerations/pilot/y-accel-fps_sec</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>  
+
+      <chunk>
+	<name>z-accel</name>
+  	<node>/accelerations/pilot/z-accel-fps_sec</node>      
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk> 
+       
+      <chunk>
+	<name>roll-rate</name>
+  	<node>/orientation/roll-rate-degps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk> 
+
+      <chunk>
+	<name>pitch-rate</name>
+  	<node>/orientation/pitch-rate-degps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>   
+
+      <chunk>
+	<name>yaw-rate</name>
+  	<node>/orientation/yaw-rate-degps</node>
+  	<type>float</type>
+  	<format>%+010.5f</format>
+      </chunk>  
+
+      <chunk>
+	<name>time</name>
+  	<node>/sim/time/mp-clock-sec</node>
+  	<type>float</type>
+  	<format>%+010.6f</format>
+      </chunk>   
+
+      <chunk>
+	<name>temp</name>
+  	<node>/sim/enviroment/temperature-degc</node>
+  	<type>int</type>
+      </chunk> 
+
+
+      <chunk>
+	<name>Press_sea</name>
+  	<node>/sim/enviroment/pressure-sea-level-inhg</node>
+  	<type>int</type>
+      </chunk>
+
+
+      <chunk>
+	<name>Press_sea</name>
+  	<node>/sim/enviroment/pressure-inhg</node>
+  	<type>int</type>
+      </chunk> 
+
+   </output>
+      
+</generic>
+</PropertyList>
