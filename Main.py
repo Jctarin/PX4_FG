@@ -1,25 +1,25 @@
-import Prueba as P
+import Simulator_class as P
 from time import sleep
 
 data=None
-#Instancia un objeto simulador
-simulador=P.simulador()
+#Instances a simulator object
+simulator=P.simulator()
 
-#Se crean las comunicaciones con PX4 y flightGear
-socket_udp=simulador.socket_udp()
-socket_tcp=simulador.socket_TCP_PX4()
-# #Lookstep
-simulador.Inicializar_PX4(socket_tcp)
+#Communications are created with PX4 and flightGear
+socket_udp=simulator.socket_udp()
+socket_tcp=simulator.socket_TCP_PX4()
+#Lookstep
+simulator.Inicialice_PX4(socket_tcp)
 while data==None:
-    simulador.Leer_FG()
-    data=simulador.Escribe_PX4(socket_tcp)
-#Bucle de comunicacion
-while True: #Mismo porceso anterior pero no inicializa la comunicacion con PX4
-    simulador.Leer_FG()
-    simulador.Escribe_PX4(socket_tcp)
-    data=simulador.Leer_PX4(socket_tcp)
+    simulator.Read_FG()
+    data=simulator.Write_PX4(socket_tcp)
+#Communication loop
+while True:
+    simulator.Read_FG()
+    simulator.Write_PX4(socket_tcp)
+    data=simulator.Read_PX4(socket_tcp)
     if data is not None:
-        simulador.Escribe_FG(socket_udp)
+        simulator.Write_FG(socket_udp)
     sleep(0.005)
 
 
