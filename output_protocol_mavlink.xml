@@ -89,12 +89,13 @@
   	<format>%+010.5f</format>
       </chunk>  
 
+
       <chunk>
-	<name>time</name>
-  	<node>/sim/time/mp-clock-sec</node>
-  	<type>float</type>
-  	<format>%+010.6f</format>
-      </chunk>   
+	    <name>elapsed_sec</name>
+	    <type>double</type>
+        <format>%+010.6f</format>
+	    <node>/sim/time/elapsed-sec</node>
+      </chunk>    
 
       <chunk>
 	<name>temp</name>
@@ -103,18 +104,48 @@
       </chunk> 
 
 
-      <chunk>
-	<name>Press_sea</name>
-  	<node>/sim/enviroment/pressure-sea-level-inhg</node>
-  	<type>int</type>
-      </chunk>
+    	<chunk>
+	<name>pressure-alt-ft</name>
+	<type>double</type>
+        <format>%.3f</format>
+	<node>/instrumentation/altimeter/pressure-alt-ft</node>
+	</chunk> 
 
 
-      <chunk>
-	<name>Press_sea</name>
-  	<node>/sim/enviroment/pressure-inhg</node>
-  	<type>int</type>
+     <chunk>
+	<name>pressure-inhg</name>
+	<type>double</type>
+        <format>%.3f</format>
+	<node>/systems/static/pressure-inhg</node>
+     </chunk> 
+
+     <chunk>
+	<name>measured-total-pressure-inhg</name>
+	<type>double</type>
+        <format>%.3f</format>
+	<node>/systems/pitot/measured-total-pressure-inhg</node>
+	</chunk>
+
+	<chunk>
+	    <name>roll_deg</name>
+	    <type>double</type>
+        <format>%.3f</format>
+	    <node>/orientation/roll-deg</node>
       </chunk> 
+
+      <chunk>
+	    <name>pitch_deg</name>
+	    <type>double</type>
+        <format>%.3f</format>
+	    <node>/orientation/pitch-deg</node>
+      </chunk> 
+
+      <chunk>
+	    <name>heading_deg</name>
+	    <type>double</type>
+        <format>%.3f</format>
+	    <node>/orientation/heading-deg</node>
+      </chunk>  
 
    </output>
       
